@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Champ pour entrer le délai entre l'envoi des SMS -->
+    <EditText
+        android:id="@+id/delayEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Délai (ms)"
+        android:inputType="number" />
+
+    <!-- Champ pour entrer le message avec les variables -->
+    <EditText
+        android:id="@+id/messageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message (avec {name}, {phone}, {address})"
+        android:inputType="text" />
+
+    <!-- Bouton pour télécharger le fichier CSV -->
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Charger le CSV" />
+
+    <!-- Bouton pour démarrer l'envoi des SMS -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Démarrer l'envoi" />
+
+</LinearLayout>
