@@ -3,9 +3,10 @@ workflows:
     name: Android Build
     max_build_duration: 60
     scripts:
-      - name: Build the app
-        script: |
-          ./gradlew clean
-          ./gradlew assembleRelease
+  - name: Build the app
+    script: |
+      chmod +x ./gradlew
+      ./gradlew clean
+      ./gradlew assembleRelease
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
