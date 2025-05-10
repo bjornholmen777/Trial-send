@@ -14,7 +14,4 @@ workflows:
           ./gradlew clean build
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk # Spécifiez le chemin de votre APK
-    publish:
-      email:
-        recipients:
-          - your_email@example.com
+    
