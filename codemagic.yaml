@@ -1,0 +1,20 @@
+workflows:
+  android-app:
+    name: Android Build
+    max_build_duration: 120
+    scripts:
+      - name: Install dependencies
+        script: |
+          # Assurez-vous que vous avez Gradle installé
+          sudo apt-get update
+          sudo apt-get install gradle
+      - name: Build the app
+        script: |
+          # Nettoyer et construire l'APK
+          ./gradlew clean build
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk # Spécifiez le chemin de votre APK
+    publish:
+      email:
+        recipients:
+          - your_email@example.com
