@@ -2,12 +2,7 @@ workflows:
   android-app:
     name: Android Build
     max_build_duration: 120
-    scripts:
-      - name: Install dependencies
-        script: |
-          # Assurez-vous que vous avez Gradle installé
-          sudo apt-get update
-          sudo apt-get install gradle
+    
       - name: Build the app
         script: |
           # Nettoyer et construire l'APK
