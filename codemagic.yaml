@@ -1,12 +1,14 @@
 workflows:
   android-app:
     name: Android Build
-    max_build_duration: 120
-    
+    max_build_duration: 60
+    environment:
+      vars:
+        JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+    scripts:
       - name: Build the app
         script: |
-          # Nettoyer et construire l'APK
-          ./gradlew clean build
+          ./gradlew clean
+          ./gradlew assembleRelease
     artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk # Spécifiez le chemin de votre APK
-    
+      - app/build/outputs/apk/release/app-release.apk
